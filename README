@@ -1,0 +1,30 @@
+                             =-=-=-=-=-=-=-=-=-=-=
+                              PowerPC750 Simulator
+                             =-=-=-=-=-=-=-=-=-=-=
+			     
+
+How directories are organized ?
+------------------------------
+
+The sub-directory "powerpc" contains the PowerPC750 simulator (written using SystemC).
+The sub-directory "ppcemul" contains the PowerPC emulator.
+Source are in "src" directories.
+Libraries are in "lib" directories.
+includes are in "include" directories.
+binary executables are in "bin" directories.
+
+Which files are built by the makefile ?
+--------------------------------------
+
+The PowerPC750 simulator (executable) : powerpc/bin/powerpc
+The PowerPC Emulator (executable) : ppcemul/bin/ppcemul
+The PowerPC Emulator library : ppcemul/lib/libppcemul.a
+
+How to build both the emulator and the simulator ?
+-------------------------------------------------
+
+1) Edit powerpc/src/Makefile : make the SYSTEMC_DIR variable point on the SystemC Directory.
+
+2) Go on the top level directory and run make.
+
+

@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/powerpc/**",
+                "/usr/local/systemc-3.0.0/include",
+                "/usr/local/systemc-3.0.0/lib"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+            "compilerPath": "/usr/bin/clang++-14"
+        }
+    ],
+    "version": 4
+}

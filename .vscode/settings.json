@@ -1,0 +1,182 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++-14",
+    "files.associations": {
+      "*.cpp": "cpp",
+      "*.cc": "cpp",
+      "*.v": "verilog",
+      "*.inc": "c",
+      "imx_gpio.h": "c",
+      "object.h": "c",
+      "cpu.h": "c",
+      "riscv_hart.h": "c",
+      "nanshan.h": "c",
+      "boot.h": "c",
+      "array": "c",
+      "chrono": "c",
+      "compare": "c",
+      "functional": "c",
+      "ratio": "c",
+      "tuple": "c",
+      "type_traits": "c",
+      "utility": "c",
+      "*.ipp": "cpp",
+      "atomic": "cpp",
+      "thread": "cpp",
+      "future": "cpp",
+      "cctype": "cpp",
+      "clocale": "cpp",
+      "cmath": "cpp",
+      "csetjmp": "cpp",
+      "csignal": "cpp",
+      "cstdarg": "cpp",
+      "cstddef": "cpp",
+      "cstdio": "cpp",
+      "cstdlib": "cpp",
+      "cstring": "cpp",
+      "ctime": "cpp",
+      "cwchar": "cpp",
+      "cwctype": "cpp",
+      "any": "cpp",
+      "strstream": "cpp",
+      "bit": "cpp",
+      "*.tcc": "cpp",
+      "bitset": "cpp",
+      "cinttypes": "cpp",
+      "codecvt": "cpp",
+      "complex": "cpp",
+      "concepts": "cpp",
+      "condition_variable": "cpp",
+      "coroutine": "cpp",
+      "cstdint": "cpp",
+      "deque": "cpp",
+      "forward_list": "cpp",
+      "list": "cpp",
+      "map": "cpp",
+      "set": "cpp",
+      "string": "cpp",
+      "unordered_map": "cpp",
+      "unordered_set": "cpp",
+      "vector": "cpp",
+      "exception": "cpp",
+      "algorithm": "cpp",
+      "iterator": "cpp",
+      "memory": "cpp",
+      "memory_resource": "cpp",
+      "numeric": "cpp",
+      "optional": "cpp",
+      "random": "cpp",
+      "regex": "cpp",
+      "source_location": "cpp",
+      "string_view": "cpp",
+      "system_error": "cpp",
+      "rope": "cpp",
+      "slist": "cpp",
+      "fstream": "cpp",
+      "initializer_list": "cpp",
+      "iomanip": "cpp",
+      "iosfwd": "cpp",
+      "iostream": "cpp",
+      "istream": "cpp",
+      "limits": "cpp",
+      "mutex": "cpp",
+      "new": "cpp",
+      "numbers": "cpp",
+      "ostream": "cpp",
+      "ranges": "cpp",
+      "scoped_allocator": "cpp",
+      "semaphore": "cpp",
+      "shared_mutex": "cpp",
+      "span": "cpp",
+      "sstream": "cpp",
+      "stdexcept": "cpp",
+      "stop_token": "cpp",
+      "streambuf": "cpp",
+      "cfenv": "cpp",
+      "typeindex": "cpp",
+      "typeinfo": "cpp",
+      "valarray": "cpp",
+      "variant": "cpp",
+      "misc.h": "c"
+    },
+    "cmake.configureOnOpen": true,
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        "--compile-commands-dir=build",
+        // 同时开启的任务数量
+        "-j=12",
+        // 告诉clangd用那个clang进行编译，路径参考which clang++的路径
+        "--query-driver=/usr/bin/clang++",
+        // clang-tidy功能
+        "--clang-tidy",
+        "--clang-tidy-checks=performance-*,bugprone-*",
+        // 全局补全（会自动补充头文件）
+        "--all-scopes-completion",
+        // 更详细的补全内容
+        "--completion-style=detailed",
+        // 补充头文件的形式
+        "--header-insertion=iwyu",
+        // pch优化的位置
+        "--pch-storage=disk",
+      ],
+
+      "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      // 函数参数
+      "parameter": "#306b72",
+      // 类或者结构体
+      "class": {
+        "fontStyle": "bold",
+        "foreground": "#729de3"
+      },
+      // 普通函数
+      "function": {
+        "foreground": "#e5b124"
+      },
+      // 临时变量
+      "variable": "#26cdca",
+      // enum的名字（enum的成员似乎并没有可以配置的）
+      "enum": "#397797",
+      // enum子项，需要clangd12以上
+      "enumMember": "#397797",
+      // 宏
+      "macro": {
+        "foreground": "#8f5daf",
+        "fontStyle": "bold"
+      },
+      // 成员函数
+      "method": {
+        "foreground": "#e5b124",
+        "fontStyle": "underline"
+      },
+      // clangd12之后会将宏关闭的部分标为comment
+      "comment": "#505050",
+      // 命名空间
+      "namespace": {
+        "foreground": "#00d780",
+        "fontStyle": "bold"
+      },
+      // 只读量加粗
+      "*.readonly": {
+        "fontStyle": "bold"
+      },
+      // 只读量等效为宏
+      "variable.readonly": {
+        "foreground": "#8f5daf",
+        "fontStyle": "bold"
+      },
+      // 静态量（静态变量，静态函数）
+      "*.static": {
+        "fontStyle": "italic"
+      },
+      // 成员变量，似乎需要clangd12以上
+      "property": {
+        "foreground": "#7ca6b7",
+        "fontStyle": "underline"
+      },
+    }
+  },
+}
