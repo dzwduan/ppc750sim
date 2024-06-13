@@ -27,4 +27,7 @@ How to build both the emulator and the simulator ?
 
 2) Go on the top level directory and run make.
 
+## 注意事项
+修改makefile中-LSYSTEMC_HOME的地址，再运行，仅支持systemc-2.x
+
 
